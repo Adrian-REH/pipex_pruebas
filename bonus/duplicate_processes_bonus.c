@@ -93,11 +93,6 @@ void command(t_pipex *pipex, char **argv, int argc)
 			process_duplicates(pipex, argv, argc);
 			// exit(0);
 		}
-		else
-		{
-			// printf("Entra aqui, INDEX %d\n", pipex->index);
-			waitpid(pipex->pid, NULL, 0);
-			pipex->index++;
-		}
+		pipex->index++;
 	}
 }
